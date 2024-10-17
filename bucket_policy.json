@@ -1,0 +1,21 @@
+{
+    "Version": "2024-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowLambdaAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "lambda.amazonaws.com"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::hoge-hoge-1111",
+                "arn:aws:s3:::hoge-hoge-1111/*"
+            ]
+        }
+    ]
+}
